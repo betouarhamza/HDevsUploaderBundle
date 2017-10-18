@@ -1,0 +1,11 @@
+services:
+    hdevs.uploader.annotation.reader:
+        class: HDevs\UploaderBundle\Annotation\UploaderAnnotationReader
+        arguments: ["@annotations.reader"]
+    hdevs.uploader.hundler.upload:
+        class: HDevs\UploaderBundle\Handler\UploadHandler
+    hdevs.uploader.listener.upload:
+        class: HDevs\UploaderBundle\EventListener\UploadSubscriber
+        arguments: ["@hdevs.uploader.annotation.reader","@hdevs.uploader.hundler.upload"]
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }

@@ -1,0 +1,35 @@
+{
+    "name": "hdevs/uploader-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony HDevsUploaderBundle",
+    "keywords": [
+        "file uploads",
+        "upload"
+    ],
+    "homepage": "https://github.com/betouarhamza",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hamza Betouar",
+            "email": "betouar.hamza.89@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "doctrine/annotations": "^1.3",
+        "symfony/dependency-injection": "^2.8|^3.1",
+        "symfony/finder": "^2.8|^3.1",
+        "symfony/framework-bundle": "^2.8.18|^3.1",
+        "symfony/property-access": "^2.8|^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "HDevs\\UploaderBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
