@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "doctrine/annotation" : "^1.3",
+        "doctrine/annotations" : "^1.3",
         "symfony/symfony": "^3.2"
     },
     "autoload": {
