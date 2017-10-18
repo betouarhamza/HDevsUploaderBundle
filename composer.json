@@ -16,8 +16,7 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "symfony/symfony": "^3.2",
-        "minimum-stability": "stable"
+        "symfony/symfony": "^3.2"
     },
     "autoload": {
         "psr-4": {
