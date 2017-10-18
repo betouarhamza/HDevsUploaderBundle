@@ -47,8 +47,10 @@ Step 3: Example
 
 ```php
 <?php
-namespace AppBundle\Entity;
+//Entity
 
+use HDevs\UploaderBundle\Annotation\Uploadable;
+use HDevs\UploaderBundle\Annotation\UploadableProperty;
 /**
  * @ORM\Table(name="post")
  * @Uploadable()
@@ -71,8 +73,23 @@ class Post
 
     /**
      * @var File
-     * @UploadableProperty(field="image", path="uploads/product")
+     * @UploadableProperty(field="image", path="uploads/posts")
      */
     private $file;
 }
+``` 
+
+```php
+<?php
+//FormType
+
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+$builder->add('file', FileType::class, [
+                'label' => 'global.image'
+            ]);
+``` 
+
+```html
+<!-- View -->
+<img src="{{ asset(post.file.pathname) }}">
 ``` 
